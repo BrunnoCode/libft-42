@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/13 12:20:29 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:16:12 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ size_t	ft_strlen(const char *s);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
-char	*ft_strcpy(char *dest, char src *);
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 
 #endif
