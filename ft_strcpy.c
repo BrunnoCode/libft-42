@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 23:39:30 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/13 12:03:44 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/13 12:10:16 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/13 13:59:24 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlcpy(char *dest, const *src, size_t destsize)
 {
-	if ((c >= 'a' && c <= 'z') || (c <= 'Z' && c >= 'A'))
-	{
-		return (1);
-	}
-	return (0);
-}
-/*
-int	main(void)
-{
-	char	c;
 
-	c = '$';
-	printf("%d", ft_isalpha(c));
-	return (0);
-}*/
+}

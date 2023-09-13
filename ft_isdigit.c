@@ -6,25 +6,26 @@
 /*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 14:17:26 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/09 20:20:20 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:04:31 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
 }
-
-int main()
+/*
+int	main(void)
 {
-    int c = '2';
-    printf("%d", ft_isdigit(c));
+	int	c;
 
-    return (0);
-}
+	c = '2';
+	printf("%d", ft_isdigit(c));
+	return (0);
+}*/

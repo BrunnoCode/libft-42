@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I
 
-SRCS = ft_strlen.c ft_isalnum.c ft_isalpha.c ft_isdigit.c
+SRCS = ft_strlen.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_strcpy.c
 
 OBJS = $(SRCS:.c=.o)
 
