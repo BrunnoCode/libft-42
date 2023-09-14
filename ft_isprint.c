@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_iprint.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/14 18:40:14 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/14 18:40:38 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/14 19:25:30 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#include "libft.h"
 
-# define LIBFT_H
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
+}
+/*
+int	main(void)
+{
+	char	caracter;
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+	printf("Escriba un caracter: ");
+	scanf("%c", &caracter);
 
-size_t	ft_strlen(const char *s);
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-#endif
+	if(ft_isprint(caracter))
+	{
+		printf("Es printable'%c'\n", caracter);
+	}
+	else
+	{
+		printf("No es printable'%c'\n", caracter);
+	}
+	return (0);
+}*/
