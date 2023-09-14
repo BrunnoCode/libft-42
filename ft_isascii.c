@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 23:39:30 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/14 11:38:17 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/14 10:24:49 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/14 13:59:30 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c <= 'Z' && c >= 'A'))
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= 0 && c <= 127);
 }
 /*
 int	main(void)
 {
-	char	c;
+	int	caracter;
 
-	c = '$';
-	printf("%d", ft_isalpha(c));
+	printf("Escriba un caracter:\n ");
+	scanf("%x", &caracter);
+	if (ft_isascii(caracter))
+	{
+		printf("El caracter '%c' es un ASCII\n", caracter);
+	}
+	else
+	{
+		printf("El caracter '%c' no es un ASCII\n", caracter);
+	}
 	return (0);
 }*/
