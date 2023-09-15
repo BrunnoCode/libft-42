@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:59:57 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/15 17:03:42 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/15 17:47:38 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,24 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	size_t	i;
+	size_t			i;
 
 	ptr = s;
 	i = 0;
-	if(*s)
+	while (i < n)
 	{
-		while(i < n)
-		{
-			ptr[i] =
-		}
+		ptr[i] = '\0';
+		i++;
 	}
+}
+
+int	main(void)
+{
+	size_t	n;
+
+	n = 7;
+	char s[] = "";
+	ft_bzero(s, n);
+	printf("La memoria ha sido rellenada con:\n|%s|", s);
+	return (0);
 }
