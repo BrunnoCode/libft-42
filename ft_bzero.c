@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 13:28:49 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/15 16:57:08 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/15 16:59:57 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/15 17:03:42 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
 	unsigned char	*ptr;
+	size_t	i;
 
+	ptr = s;
 	i = 0;
-	ptr = b;
-	while (i < len)
+	if(*s)
 	{
-		ptr[i] = (unsigned char)c;
-		i++;
+		while(i < n)
+		{
+			ptr[i] =
+		}
 	}
-	return (b);
 }
-/*
-int	main(void)
-{
-	size_t	len;
-	int		c;
-
-	len = 10;
-	c = 57;
-	char str[] = "";
-	printf("memoria completada con\n%s", ft_memset(str, c, len));
-	return (0);
-}*/
