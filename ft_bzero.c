@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:59:57 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/15 18:46:36 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:07:28 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	size_t	n;
@@ -35,4 +35,4 @@ int	main(void)
 	ft_bzero(s, n);
 	printf("La memoria ha sido rellenada con:\n|%s|", s);
 	return (0);
-}
+}*/
