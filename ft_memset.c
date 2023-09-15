@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/15 13:27:41 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/15 13:28:49 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/15 14:50:29 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+//#include "libft.h"
 
-# define LIBFT_H
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t			i;
+	unsigned char	*ptr;
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+	i = 0;
+	ptr = b;
+	while (i < len)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (b);
+}
+/*
+int	main(void)
+{
+	size_t	len;
+	int		c;
 
-size_t	ft_strlen(const char *s);
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-void	*ft_memset(void *b, int c, size_t len);
-#endif
+	len = 10;
+	c = 57;
+	char str[] = "";
+	printf("memoria completada con\n%s", ft_memset(str, c, len));
+	return (0);
+}*/
