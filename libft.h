@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/16 11:12:00 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/16 22:28:14 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int		ft_isprint(int c);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
 #endif
