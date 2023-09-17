@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:57:28 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/17 15:02:05 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/17 16:40:32 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (i < len)
 		{
-			ptdst[len - i -1] = ptsrc[len - i - 1];
+			ptdst[len - i - 1] = ptsrc[len - i - 1];
 			i++;
 		}
 	}
