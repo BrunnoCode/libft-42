@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:57:28 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/17 16:40:32 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/17 23:43:35 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,33 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*ptdst;
-	unsigned char	*ptsrc;
+	// Declaramos nossas variáveis
+	size_t i; // size_t i pois vamos comparar um size de len
+	char *d;  // Declaro um ponteiro que irá receber o meu dst
+	char *s;  // Faço o mesmo aqui pra receber o src
 
+	d = (char *)d;
+		// Fazemos um cast para que nossa variável receba nossos ponteiros *dst *src
+	s = (char *)s;
 	i = 0;
-	ptdst = (unsigned char *)dst;
-	ptsrc = (unsigned char *)src;
-	if (ptdst == 0 && ptsrc == 0)
-		return (NULL);
-	if (len == 0)
-		return (dst);
-	if (ptsrc < ptdst)
+	if (d > s) // se o destino for maior que origem
 	{
-		while (i < len)
+		while (0 < len) // exemplo: o total de len é 8,
+			que representa uma posicao do array de src
 		{
-			ptdst[len - i - 1] = ptsrc[len - i - 1];
-			i++;
+			len--;          
+				// Entao em cada loop essa posicao vai diminuindo 8,7,6,5,4,3,2,1
+			d[len] = s[len];
+				// d vai recebendo o cada valor de s na posicao atual de len
 		}
 	}
-	else
+	else // se o destino for menor que origem os dados se sobrepoem normalmente
 	{
-		while (i < len)
+		while (i < len - 1)
 		{
-			ptdst[i] = ptsrc[i];
+			d[i] = s[i];
 			i++;
 		}
 	}
 	return (dst);
-}
-
-int	main(void)
-{
-	size_t	len;
-
-	char dst[] = "lskjfladlfakjdf";
-	const char src[] = "tudoo bem cara qual e o seu nome";
-	len = 19;
-	printf("que habia antes en dst? %s\n", dst);
-	printf("Ahora dentro de dst hay: %s", ft_memmove(dst, src, len));
-	return (0);
 }
