@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:57:28 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/18 11:46:18 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/18 12:50:35 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+/*
+#include <string.h>
+int main(int c, char **v)
+{
+	if (c == 4)
+	{
+		printf ("Tu Resultado: '%s'.\n", ft_memmove(v[1], v[2], atoi(v[3])));
+		printf ("Resultado Esperado: '%s'.\n", memmove(v[1], v[2], atoi(v[3])));
+	}
+	else
+		printf("error de argumentos :D.\n");
+	return (0);
+}*/
