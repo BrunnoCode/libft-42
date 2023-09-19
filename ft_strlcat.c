@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:06:42 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/19 20:17:18 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:53:28 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[d_len] = '\0';
 	return (total_len);
 }
-
+/*
 #include <stdlib.h>
 #include <string.h>
 
@@ -60,4 +60,4 @@ int	main(int argc, char **argv)
 	printf("Destino despues de la funcion: \"%s\"\n", dst);
 	printf("Destino antes de la funcion: \"%zu\"\n", res);
 	return (0);
-}
+}*/
