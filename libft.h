@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/20 12:35:55 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:34:30 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
