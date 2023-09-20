@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:06:42 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/19 21:28:28 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/20 11:40:16 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 #include <stdlib.h>
 #include <string.h>
 
-int	main()
+int	main(void)
 {
 	char		dst[100] = "mi destino";
 	const char	*src = " espero que esto apare haya ejecutado la funcion";
@@ -52,7 +52,7 @@ int	main()
 	res = ft_strlcat(dst, src, destsize);
 	printf("Destino despues de la funcion: \"%s\"\n", dst);
 	printf("Total despues de la funcion: \"%zu\"\n", res);
-	
+
 	printf("Destino antes de la funcion: \"%s\"\n", dst);
 	res = strlcat(dst, src, destsize);
 	printf("Destino despues de la funcion: \"%s\"\n", dst);

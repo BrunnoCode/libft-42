@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/19 20:20:38 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/20 12:35:55 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <unistd.h>
 
 int		ft_isalnum(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
