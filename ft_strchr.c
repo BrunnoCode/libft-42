@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:31:35 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/20 19:20:29 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:25:13 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return ((char *)'\0');
 }
-
+/*
 #include <string.h>
 int main()
 {
-	char	s[] = "kjfs0395jkhb";
-	int	c = '8';
+	char	s[] = "k573@#@%6$%g5";
+	int	c = '%';
 	printf("En tu funcion Hemos encontrado: '%s' \n", ft_strchr(s, c));
 	printf("Funcion original: '%s' \n", strchr(s, c));
 	return (0);
-}
+}*/
