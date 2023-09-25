@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 17:27:42 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/23 18:38:23 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/25 17:41:17 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	len;
 
-	i = ft_strlen(s) - 1;
-	while (i != 0)
+	len = 0;
+	while (s[len])
+		len++;
+	if (s[len] == (char)c)
+		return ((char *)&s[len]);
+	while (s[len] != (char)c && len > 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		len--;
 	}
+	if (s[len] == (char)c)
+		return ((char *)&s[len]);
 	return (NULL);
 }
 /*
@@ -30,8 +34,10 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main(void)
 {
+	int	c;
+
 	char s[] = "teste";
-	int c = 357;
+	c = 'a';
 	printf("Resultado de Mi funcion: %s \n", ft_strrchr(s, c));
 	printf("Resultado funcion original: %s \n", strrchr(s, c));
 	printf("Total de length: '%ld' \n", strlen(s));
