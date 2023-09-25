@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 17:51:55 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/25 18:50:29 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/25 19:47:48 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (!n)
 		return (0);
-	while (i <= n && s1[i] && s2[i] && s1[i] == s2[i])
+	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	if (i < n)
-		return (s1[i] - s2[i]);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	return (0);
 }
-/*#include <string.h>
+/*
+#include <string.h>
 
 int	main(void)
 {
-	size_t	n;
-
-	char s1[] = "h";
-	char s2[] = "h";
-	n = '\n';
-	printf("Resultado mi funcion: '%d' \n", ft_strncmp(s1, s2, n));
-	printf("Resultado funcion original: '%d' \n", strncmp(s1, s2, n));
+	printf("Resultado mi funcion: '%d' \n", ft_strncmp("abcdef", "abc\357xx",
+			5));
+	printf("Resultado funcion original: '%d' \n", strncmp("abcdef", "abc\357xx",
+			5));
 	return (0);
 }*/
