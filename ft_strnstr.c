@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:29:52 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/26 20:36:42 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/27 19:36:50 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,24 @@
 char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
 	size_t	i;
-	size_t	c;
+	size_t	j;
+	char	*pos;
 
 	i = 0;
-	c = 0;
-	if (!len)
-		return (NULL);
-	while (len--)
+	pos = 0;
+	while (h[i] && i < len)
 	{
-		if (n[c] == h[i])
+		j = 0;
+		if (h[i] == n[j] && n[j] != '\0')
 		{
-			while (n && n[c] == h[i])
-				c++;
+			j++;
 		}
-		h++;
+		if (n[j] == '\0')
+			pos = h[i];
+		return (pos)
+			i++;
 	}
+	return (pos);
 }
 #include <stdio.h>
 #include <string.h>
@@ -42,7 +45,7 @@ int	main(void)
 
 	h = "hola mi nombre es brunno";
 	n = "nombre";
-	len = 16;
+	len = 22;
 	printf("resultado original es: %s \n", strnstr(h, n, len));
 	printf("mi funcion es: %s \n", ft_strnstr(h, n, len));
 	return (0);
