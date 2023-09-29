@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:33:51 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/29 13:19:57 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:14:08 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ int	ft_atoi(const char *str)
 	signal = 1;
 	if (!*str)
 		return (0);
-	while (!(str[i] >= '48' && str[i] <= '57') || (str[i] == '-'))
-		i++;
 	while ((str[i] >= '48' && str[i] <= '57') || (str[i] == '-'))
 	{
+		if ((str[i] == ' ') || (str[i] == '/n') || (str[i] == '\t')
+			|| (str[i] == '\f'))
+			i++;
 		if (str[i] == '-')
 		{
 			signal = -1;
