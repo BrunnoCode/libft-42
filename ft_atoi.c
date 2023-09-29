@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:33:51 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/29 21:59:55 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/09/29 22:10:27 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static int	ignore(const char *str)
 	int	i;
 
 	i = 0;
-	while ((str[i] == ' ') || (str[i] == '\n') || (str[i] == '\t')
-		|| (str[i] == '\f') || (str[i] == '\v') || (str[i] == '\r'))
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	return (i);
 }
