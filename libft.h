@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/30 22:24:06 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/01 03:44:49 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *s, size_t n);
+// FUNCIONES DE LA PARTE 2 (FUNCIONES ADICIONALES)
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
