@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 17:51:55 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/30 16:59:51 by bbotelho         ###   ########.fr       */
+/*   Created: 2023/09/29 23:12:26 by bbotelho          #+#    #+#             */
+/*   Updated: 2023/09/30 21:55:51 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t len, size_t type)
 {
-	size_t	i;
+	void	*pt;
 
-	i = 0;
-	if (!n)
-		return (0);
-	while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	if (i < n)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (0);
+	pt = malloc(len * type);
+	if (!pt)
+		return (NULL);
+	ft_bzero(pt, len * type);
+	return (pt);
 }
 /*
-#include <string.h>
-
 int	main(void)
 {
-	printf("Resultado mi funcion: '%d' \n", ft_strncmp("abcdef", "abc\357xx",
-			5));
-	printf("Resultado funcion original: '%d' \n", strncmp("abcdef", "abc\357xx",
-			5));
+	//int	arr = {1, 4, 4, 5, 8, 9};
+	size_t	ec = 6;
+	size_t	size = sizeof(int);
+
+	printf("Resultado de mi funcion %p\n %s\n:", ft_calloc(ec, size),
+		ft_calloc(ec, size));
+	printf("Resultado funcion Original %p\n %s\n:", calloc(ec, size), calloc(ec,
+			size));
 	return (0);
 }*/
