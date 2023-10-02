@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 01:57:17 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/10/01 06:17:40 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/02 18:53:08 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char const	*ss;
-	size_t		i;
-	char		*reserva;
-	size_t		lensub;
+	char	*ptr;
+	size_t	str_len;
+	size_t	i;
 
-	//	if ((!len) || (len > ft_strlen(s)))
-	//		return (NULL);
-	ss = ft_strchr(s, start);
-	if (len < (lensub = ft_strlen(ss)))
-		return (0);
-	reserva = malloc(lensub * sizeof(char));
-	if (!reserva)
+	if (!s)
+		return (NULL);
+	if ((unsigned int)ft_strlen(s) < start)
+		return (ft_strdup(""));
+	str_len = ft_strlen(s + start);
+	if (str_len < len)
+		len = str_len;
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < lensub && ss[i] != '\0')
+	while (i < len)
 	{
-		reserva[i] = *(char *)&ss[i];
+		ptr[i] = s[start + i];
 		i++;
 	}
-	return (reserva);
+	ptr[i] = '\0';
+	return (ptr);
 }
 /*
 int	main(void)
@@ -41,12 +43,10 @@ int	main(void)
 	char const		*s;
 	unsigned int	start;
 	size_t			len;
-	const char		*res;
 
 	s = "El timur siempre sera el tio";
-	start = 's';
-	res = ft_strchr(s, start);
-	len = ft_strlen(res);
-	print("Resultado: %s \n", ft_substr(s, start, len));
+	start = 5;
+	len = 13;
+	printf("Resultado: %s \n", ft_substr(s, start, len));
 	return (0);
 }*/
