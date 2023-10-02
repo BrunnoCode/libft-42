@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 19:36:42 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/10/02 21:02:27 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/02 21:13:41 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		len;
+	int		len1;
+	int		len2;
 	int		i;
 	int		j;
 
 	if (s1 == 0 && s2 == 0)
 		return (NULL);
-	len = (unsigned int)ft_strlen(s1 + s2);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	len = (len1 + len2);
 	if (!(str = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	i = 0;
