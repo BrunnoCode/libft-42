@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 18:29:52 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/09/28 18:24:57 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/03 18:31:58 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(void)
 	const char	*n;
 
 	h = "hola mi nombre es brunno";
-	n = "u";
+	n = "";
 	len = 14;
 	printf("resultado original es: %s \n", strnstr(h, n, len));
 	printf("mi funcion es: %s \n", ft_strnstr(h, n, len));

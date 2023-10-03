@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:42:14 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/10/03 15:40:39 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/03 15:42:47 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	return (ft_substr(s1, i, len - i + 1));
 }
+/*
 int	main(void)
 {
 	char	*s1;
@@ -34,4 +35,4 @@ int	main(void)
 	set = "&";
 	printf("String cortada: %s\n", ft_strtrim(s1, set));
 	return (0);
-}
+}*/
