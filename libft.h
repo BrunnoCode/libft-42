@@ -6,7 +6,7 @@
 /*   By: bbotelho <bbotelho@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:59:15 by bbotelho          #+#    #+#             */
-/*   Updated: 2023/10/03 18:04:03 by bbotelho         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:57:02 by bbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s1, char c);
+char	*ft_itoa(int n);
 #endif
